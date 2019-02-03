@@ -68,7 +68,7 @@ var wasser = new Howl({         //Änderung: Cello
 
 
 
-var ambient = new Howl({     //Änderung: Bass
+var ambient = new Howl({
   src: ["ambient.wav"],
   preload: true,
   volume: 0,
@@ -77,7 +77,7 @@ var ambient = new Howl({     //Änderung: Bass
 });
 
 
-var gitarre = new Howl({     //Änderung: Bass
+var gitarre = new Howl({
   src: ["gitarre.wav"],
   preload: true,
   volume: 0,
@@ -86,14 +86,16 @@ var gitarre = new Howl({     //Änderung: Bass
 });
 
 
-if (wasser.state() == loaded && terz.state() == loaded && stimme.state() == loaded && bass.state() == loaded && zweiteStimme.state() == loaded && ambient.state() == loaded && gitarre.state() == loaded) {
+
+
 wasser.play();
 terz.play();
 stimme.play();
 bass.play();
 zweiteStimme.play();
 ambient.play();
-gitarre.play();}
+gitarre.play();
+
 
 
 /* Euer Code */
@@ -253,11 +255,11 @@ function stimme1(){
   var zweitestimmedurch=true;
 
   function stimme2(){
-      if (stimme.volume()>0.9 && zweitestimmedurch ==true && (tasse3ahoi==true || tasse2ahoi == true)){
+      if (stimme.volume()>0.9 && zweitestimmedurch ==true && anzahl>1){
         zweiteStimme.fade(zweiteStimme.volume(),0.1,fadeInLength);
         zweitestimmedurch=false;
       }
-      else if (stimme.volume()<0.9 && zweitestimmedurch ==false && tasse1ahoi==false && tasse2ahoi == false){
+      else if (anzahl<=1){
         zweiteStimme.fade(zweiteStimme.volume(),0, fadeOutLength)
         zweitestimmedurch =true;
       }
@@ -301,11 +303,11 @@ function wasserdazu(){
 var ambientbitte= true;
 
 function ambientdazu(){
-  if (stimme.volume()>0.9 && ambientbitte ==true && (tasse1ahoi==true || tasse3ahoi == true)){
+  if (stimme.volume()>0.9 && ambientbitte ==true && anzahl>1){
     ambient.fade(ambient.volume(),1,fadeInLength);
     ambientbitte=false;
   }
-  else if (bass.volume()<0.9 && ambientbitte ==false && tasse1ahoi==false && tasse2ahoi == false){
+  else if (anzahl<=1){
     ambient.fade(ambient.volume(),0,fadeOutLength)
     ambientbitte =true;
   }
@@ -318,11 +320,11 @@ function ambientdazu(){
 var gitarrebitte= true;
 
 function gitarredazu(){
-  if (stimme.volume()>0.9 && gitarrebitte ==true && (tasse1ahoi==true || tasse2ahoi == true)){
+  if (stimme.volume()>0.9 && gitarrebitte ==true && anzahl>1){
     gitarre.fade(gitarre.volume(),0.4,fadeInLength);
     gitarrebitte=false;
   }
-  else if (bass.volume()<0.9 && gitarrebitte ==false && tasse1ahoi==false && tasse2ahoi == false){
+  else if (anzahl<=1){
     gitarre.fade(gitarre.volume(),0,fadeOutLength)
     gitarrebitte =true;
   }
