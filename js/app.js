@@ -244,7 +244,7 @@ function stimme1(){
       stimmedurchziehenbitte=false;
     }
     else if (bass.volume()<0.9 && stimmedurchziehenbitte ==false && (tasse1ahoi==false || tasse2ahoi == false)){
-      stimme.fade(stimme.volume(),0,fadeOutLength)
+      stimme.fade(stimme.volume(),0,fadeOutLength);
       stimmedurchziehenbitte =true;
     }
   	setTimeout(function(){stimme1();},1000)
@@ -259,8 +259,8 @@ function stimme1(){
         zweiteStimme.fade(zweiteStimme.volume(),0.1,fadeInLength);
         zweitestimmedurch=false;
       }
-      else if (anzahl<=1){
-        zweiteStimme.fade(zweiteStimme.volume(),0, fadeOutLength)
+      else if (anzahl<=1 && zweitestimmedurch==false){
+        zweiteStimme.fade(zweiteStimme.volume(),0, fadeOutLength);
         zweitestimmedurch =true;
       }
     	setTimeout(function(){stimme2();},1000)
@@ -272,11 +272,11 @@ var terzbitte=true;
 
 function terzdazu(){
   if (bass.volume()>0.3 && terzbitte ==true){
-    terz.fade(terz.volume(),0.5,fadeInLength);
+    terz.fade(terz.volume(),0.6,fadeInLength);
     terzbitte=false;
   }
   else if (bass.volume()<0.9 && terzbitte ==false && (tasse1ahoi==false || tasse2ahoi == false)){
-    terz.fade(terz.volume(),0,fadeOutLength)
+    terz.fade(terz.volume(),0,fadeOutLength);
     terzbitte =true;
   }
   setTimeout(function(){terzdazu();},1000)
@@ -287,12 +287,12 @@ function terzdazu(){
 var wasserbitte= true;
 
 function wasserdazu(){
-  if (terz.volume()>0.5 && wasserbitte ==true){
+  if (terz.volume()>0.45 && wasserbitte ==true){
     wasser.fade(wasser.volume(),0.7,fadeInLength);
     wasserbitte=false;
   }
   else if (bass.volume()<0.9 && wasserbitte ==false && (tasse1ahoi==false || tasse2ahoi == false)){
-    wasser.fade(wasser.volume(),0,fadeOutLength)
+    wasser.fade(wasser.volume(),0,fadeOutLength);
     wasserbitte =true;
   }
   setTimeout(function(){wasserdazu();},1000)
@@ -307,8 +307,8 @@ function ambientdazu(){
     ambient.fade(ambient.volume(),1,fadeInLength);
     ambientbitte=false;
   }
-  else if (anzahl<=1){
-    ambient.fade(ambient.volume(),0,fadeOutLength)
+  else if (anzahl<=1 && ambientbitte==false){
+    ambient.fade(ambient.volume(),0,fadeOutLength);
     ambientbitte =true;
   }
   setTimeout(function(){ambientdazu();},1000)
@@ -324,8 +324,8 @@ function gitarredazu(){
     gitarre.fade(gitarre.volume(),0.4,fadeInLength);
     gitarrebitte=false;
   }
-  else if (anzahl<=1){
-    gitarre.fade(gitarre.volume(),0,fadeOutLength)
+  else if (anzahl<=1 && gitarrebitte==false){
+    gitarre.fade(gitarre.volume(),0,fadeOutLength);
     gitarrebitte =true;
   }
   setTimeout(function(){gitarredazu();},1000)
