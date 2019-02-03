@@ -41,23 +41,23 @@ display:none;
   position: fixed;
   top:85%;
   right: 4%;
-  width: 2%;
+  width: 4%;
   height: auto;
   opacity: 0.5;
 }
 #icon2{
   position: fixed;
-  top:80%;
+  top:77%;
   right: 4%;
-  width: 2%;
+  width:4%;
   height: auto;
   opacity: 0.5;
 }
 #icon3{
   position: fixed;
-  top:75%;
+  top:70%;
   right: 4%;
-  width: 2%;
+  width: 4%;
   height: auto;
   opacity: 0.5;
 }
