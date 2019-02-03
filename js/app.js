@@ -85,13 +85,15 @@ var gitarre = new Howl({     //Änderung: Bass
   loop: true,
 });
 
+
+if (wasser.state() == loaded && terz.state() == loaded && stimme.state() == loaded && bass.state() == loaded && zweiteStimme.state() == loaded && ambient.state() == loaded && gitarre.state() == loaded) {
 wasser.play();
 terz.play();
 stimme.play();
 bass.play();
 zweiteStimme.play();
 ambient.play();
-gitarre.play();
+gitarre.play();}
 
 
 /* Euer Code */

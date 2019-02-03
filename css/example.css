@@ -61,7 +61,16 @@ display:none;
   height: auto;
   opacity: 0.5;
 }
+#wortmarke {
+  text-align: right;
+  position: absolute;
+  top:15px;
+  left: 15px;
+  width: 10%;
+  height: auto;
 
+
+}
 #logo{
   text-align: right;
   position: absolute;
@@ -69,6 +78,15 @@ display:none;
   left: 15px;
   width: 10%;
   height: auto;
+  -webkit-animation: rotation 60s infinite linear;
+}
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
 }
 
 
