@@ -26,42 +26,42 @@ function initialize(){
 
 
 var bass = new Howl({       //Änderung in Wasser
-  src: ["wasser.wav"],
+  src: ["wasser.mp3"],
   preload: true,
-  volume: 0,
+  volume: 1,
   autoplay: false,
   loop: true,
 });
 
 var stimme = new Howl({     //Änderung in melodie
-  src: ["Melodie.wav"],
+  src: ["Melodie.mp3"],
   preload: true,
-  volume: 0,
+  volume: 1,
   autoplay: false,
   loop: true,
 });
 
 
 var zweiteStimme = new Howl({   //Änderung: streicher
-  src: ["streicher.wav"],
+  src: ["streicher.mp3"],
   preload: true,
-  volume: 0,
+  volume: 1,
   autoplay: false,
   loop: true,
 });
 
 var terz = new Howl({     //Änderung: Bass
-  src: ["bass.wav"],
+  src: ["bass.mp3"],
   preload: true,
-  volume: 0,
+  volume: 1,
   autoplay: false,
   loop: true,
 });
 
 var wasser = new Howl({         //Änderung: Cello
-  src: ["cello.wav"],
+  src: ["cello.mp3"],
   preload: true,
-  volume: 0,
+  volume: 1,
   autoplay: false,
   loop: true,
 });
@@ -69,18 +69,18 @@ var wasser = new Howl({         //Änderung: Cello
 
 
 var ambient = new Howl({
-  src: ["ambient.wav"],
+  src: ["ambient.mp3"],
   preload: true,
-  volume: 0,
+  volume: 1,
   autoplay: false,
   loop: true,
 });
 
 
 var gitarre = new Howl({
-  src: ["gitarre.wav"],
+  src: ["gitarre.mp3"],
   preload: true,
-  volume: 0,
+  volume: 1,
   autoplay: false,
   loop: true,
 });
