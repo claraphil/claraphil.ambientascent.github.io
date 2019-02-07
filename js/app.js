@@ -28,7 +28,7 @@ function initialize(){
 var bass = new Howl({       //Änderung in Wasser
   src: ["wasser.mp3"],
   preload: true,
-  volume: 1,
+  volume: 0,
   autoplay: false,
   loop: true,
 });
@@ -36,7 +36,7 @@ var bass = new Howl({       //Änderung in Wasser
 var stimme = new Howl({     //Änderung in melodie
   src: ["Melodie.mp3"],
   preload: true,
-  volume: 1,
+  volume: 0,
   autoplay: false,
   loop: true,
 });
@@ -45,7 +45,7 @@ var stimme = new Howl({     //Änderung in melodie
 var zweiteStimme = new Howl({   //Änderung: streicher
   src: ["streicher.mp3"],
   preload: true,
-  volume: 1,
+  volume: 0,
   autoplay: false,
   loop: true,
 });
@@ -53,7 +53,7 @@ var zweiteStimme = new Howl({   //Änderung: streicher
 var terz = new Howl({     //Änderung: Bass
   src: ["bass.mp3"],
   preload: true,
-  volume: 1,
+  volume: 0,
   autoplay: false,
   loop: true,
 });
@@ -61,7 +61,7 @@ var terz = new Howl({     //Änderung: Bass
 var wasser = new Howl({         //Änderung: Cello
   src: ["cello.mp3"],
   preload: true,
-  volume: 1,
+  volume: 0,
   autoplay: false,
   loop: true,
 });
@@ -71,7 +71,7 @@ var wasser = new Howl({         //Änderung: Cello
 var ambient = new Howl({
   src: ["ambient.mp3"],
   preload: true,
-  volume: 1,
+  volume: 0,
   autoplay: false,
   loop: true,
 });
@@ -80,7 +80,7 @@ var ambient = new Howl({
 var gitarre = new Howl({
   src: ["gitarre.mp3"],
   preload: true,
-  volume: 1,
+  volume: 0,
   autoplay: false,
   loop: true,
 });
