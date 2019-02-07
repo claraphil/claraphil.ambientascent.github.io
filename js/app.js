@@ -141,21 +141,22 @@ function checkIfColorVisible(){
 
 }
 checkIfColorVisible();
-tassenanzahl();
+
 /* Hier passieren dann die Audio sachen */
 
 
 var tasse1ahoi = false;
 var tasse2ahoi = false;
 var tasse3ahoi =false;
-var fadeInLength = 10000;
-var fadeOutLength = 30000;
+var fadeInLength = 20000;
+var fadeOutLength = 20000;
 
 
 function fadeInSound1 () {
 if (tasse1ahoi == false) {      //Tasse wird registriert
 tasse1ahoi = true;
 anzahl++;
+document.getElementById("icon1").style.opacity = "1";
 
   if (tasse2ahoi== false && tasse3ahoi==false){                //Muss Tasse noch Sound abspielen?
     bass.fade(bass.volume(),1, fadeInLength);       //jap, dann einmal Bass bitte
@@ -172,6 +173,7 @@ function fadeInSound2() {
 if (tasse2ahoi == false) {      //Tasse wird registriert
 tasse2ahoi = true;
 anzahl++;
+document.getElementById("icon2").style.opacity = "1";
 
   if (tasse1ahoi== false && tasse3ahoi == false){                //Muss Tasse noch Sound abspielen?
     bass.fade(bass.volume(),1,fadeInLength);       //jap
@@ -189,6 +191,7 @@ function fadeInSound3() {
 if (tasse3ahoi == false) {      //Tasse wird registriert
 tasse3ahoi = true;
 anzahl++;
+document.getElementById("icon3").style.opacity = "1";
 
   if (tasse1ahoi== false && tasse2ahoi == false){                //Muss Tasse noch Sound abspielen?
     bass.fade(bass.volume(),1,fadeInLength);       //jap
@@ -206,6 +209,7 @@ function fadeOutSound1() {
 if (tasse1ahoi == true){           //Tasse1 einmal abmelden bitte
   tasse1ahoi = false;
   anzahl--;
+  document.getElementById("icon1").style.opacity = "0.5";
   if (tasse2ahoi == false && tasse3ahoi ==false)   {      //und bitte nur faden wenn du die letzte Tasse bist
     bass.fade(bass.volume(),0,fadeOutLength);
   }
@@ -217,6 +221,7 @@ function fadeOutSound2() {
 if (tasse2ahoi == true){           //Tasse1 einmal abmelden bitte
   tasse2ahoi = false;
   anzahl--;
+  document.getElementById("icon2").style.opacity = "0.5";
   if (tasse1ahoi == false && tasse3ahoi ==false)   {      //und bitte nur faden wenn du die letzte Tasse bist
     bass.fade(bass.volume(),0,fadeOutLength);
   }
@@ -228,6 +233,7 @@ function fadeOutSound3() {
 if (tasse3ahoi == true){           //Tasse1 einmal abmelden bitte
   tasse3ahoi = false;
   anzahl--;
+  document.getElementById("icon3").style.opacity = "0.5";
   if (tasse1ahoi == false && tasse2ahoi ==false)   {      //und bitte nur faden wenn du die letzte Tasse bist
     bass.fade(bass.volume(),0,fadeOutLength);
   }
@@ -360,4 +366,3 @@ else{
 }
   setTimeout(function(){tassenanzahl();},1000)
 }
-tassenanzahl();
