@@ -17,9 +17,9 @@
     CONFIG = {
 
       // RGB Color to detect
-      color: '#0628a0',
-      color2: '#fc3c78',
-      color3: '#2daf50',
+      color: '#2864b4', 
+      color2: '#fa4678',
+      color3: '#4aae5a',
 
       // Webcam element to capture
       webcamElm: document.getElementById('webcam'),
