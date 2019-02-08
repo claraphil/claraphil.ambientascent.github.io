@@ -17,7 +17,7 @@
     CONFIG = {
 
       // RGB Color to detect
-      color: '#3264a0',
+      color: '#25629b',
       color2: '#fc3c78',
       color3: '#2daf50',
 
